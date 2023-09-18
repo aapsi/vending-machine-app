@@ -1,22 +1,78 @@
 /* styles.css */
 .main {
-    background: linear-gradient(135deg, #ff6b6b, #ffa07a, #ffd700, #98fb98, #87ceeb);
+    background: linear-gradient(135deg, #7fdcf7, #ffb6c1, #ffeaa7);
+    margin: 0; /* Remove default margin to fill the entire viewport */
+    min-height: 100vh; /* Ensure full viewport height */
+    background: linear-gradient(135deg, #7fdcf7, #ffb6c1, #ffeaa7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+  
+    
 }
 
 
 .main h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 2em;
+    font-family: 'Press Start 2P', cursive; /* Use a game-like font */
+    text-transform: uppercase; /* Convert text to uppercase for authenticity */
+    letter-spacing: 4px; /* Increase letter spacing for a pixelated look */
+    font-size: 30px;
     font-weight: bold;
+    animation: blink 1s infinite;
 }
 
-/* styles.css */
-/* Apply Pacifico font to headings */
-/* h1, h2, h3, h4, h5, h6 {
-    font-family: 'Pacifico', cursive;
-} */
 
-/* Apply Pacifico font to buttons */
-.button {
-    font-family: 'Pacifico', cursive;
+.donut-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Don't capture mouse events */
+    z-index: 5; /* Push the donuts behind the content */
 }
+
+
+
+.donut {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff6347; /* Donut color */
+    position: absolute;
+    animation: fall 5s linear infinite; /* Adjust duration as needed */
+    opacity: 0.7; /* Initial opacity */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px); /* Starting position just above the viewport */
+        opacity: 0.7; /* Slight opacity for depth */
+    }
+    100% {
+        transform: translateY(calc(100vh + 50px)); /* Ending position just below the viewport */
+        opacity: 0.3; /* Decrease opacity as donuts move down */
+    }
+}
+
+.my-button {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(135deg, #7fdcf7, #ffb6c1, #ffeaa7);
+    /* You can adjust the gradient colors as needed */
+    color: #fff; /* Set the text color to white or any color that contrasts with the background */
+    /* Add any other button styles you need */
+}
+
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
