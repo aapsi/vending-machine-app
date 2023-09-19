@@ -150,13 +150,6 @@ const VendingMachine = () => {
                   <p>{successMsg}</p>
               </div>
           </section>
-          <div class="donut-container">
-                {/* <!-- Add multiple donut elements here --> */}
-                <div class="donut"></div>
-                <div class="donut"></div>
-                <div class="donut"></div>
-                {/* <!-- Add more donuts as needed --> */}
-            </div>
         </div>
         
     )

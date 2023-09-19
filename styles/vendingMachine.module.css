@@ -12,6 +12,7 @@
     padding: 1rem;
     font-size: 20px;
     font-weight: bold;
+    color: black;
   
     
 }
@@ -24,41 +25,21 @@
     font-size: 30px;
     font-weight: bold;
     animation: blink 1s infinite;
+    color: black;
 }
 
+.label {
+    color: black;
+}
 
-.donut-container {
-    position: absolute;
+.my-navbar {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    pointer-events: none; /* Don't capture mouse events */
-    z-index: 5; /* Push the donuts behind the content */
-}
-
-
-
-.donut {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #ff6347; /* Donut color */
-    position: absolute;
-    animation: fall 5s linear infinite; /* Adjust duration as needed */
-    opacity: 0.7; /* Initial opacity */
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(-50px); /* Starting position just above the viewport */
-        opacity: 0.7; /* Slight opacity for depth */
-    }
-    100% {
-        transform: translateY(calc(100vh + 50px)); /* Ending position just below the viewport */
-        opacity: 0.3; /* Decrease opacity as donuts move down */
-    }
-}
+    background-color: rgba(52, 152, 219, 0.7); /* Change this to your desired background color */
+    z-index: 100; /* Ensure the navbar appears above other content */
+  }
 
 .my-button {
     font-family: 'Press Start 2P', cursive;
